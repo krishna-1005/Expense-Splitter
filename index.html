@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Splitter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1 class="main-title">Expense Splitter</h1>
+      <h2 class="subtitle">
+        Track, split & settle group expenses <span>easily</span>
+      </h2>
+      <button id="themeToggle" class="secondary-btn">🌙</button>
+    </header>
+
+    <!-- GROUP -->
+    <section class="card">
+      <h2>Create Group</h2>
+      <input id="groupName" placeholder="Group Name" />
+      <button id="createGroupBtn">Create Group</button>
+      <p id="currentGroup"></p>
+    </section>
+
+    <!-- MEMBERS -->
+    <section class="card">
+      <h2>Add Members</h2>
+      <input id="memberName" placeholder="Member Name" />
+      <button id="addMemberBtn">Add Member</button>
+      <ul id="memberList"></ul>
+    </section>
+
+    <!-- EXPENSE -->
+    <section class="card">
+      <h2>Add Expense</h2>
+      <input id="expenseDesc" placeholder="Expense Description" />
+      <input id="expenseAmount" type="number" placeholder="Amount ₹" />
+
+      <h4>Paid By</h4>
+      <div id="payerCheckboxes" class="checkbox-group"></div>
+
+      <button id="addExpenseBtn">Add Expense</button>
+      <ul id="expenseList"></ul>
+    </section>
+
+    <!-- SETTLEMENT -->
+    <section class="card">
+      <h2>Net Settlement</h2>
+      <ul id="balanceList"></ul>
+    </section>
+
+    <section class="card reset">
+      <button id="resetBtn" class="danger-btn">Reset Group</button>
+    </section>
+
+    <!-- EXPENSE HISTORY -->
+  <section class="card">
+    <h2>Expense History</h2>
+    <ul id="historyList"></ul> 
+  </section>
+  
+  <button id="downloadPdfBtn">Download PDF Receipt</button>
+
+  </div>
+</body>
+</html>
